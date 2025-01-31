@@ -1,0 +1,16 @@
+
+## Workflow Details
+
+### Prompt for Blog Content Generation:
+Summarize the lecture transcript into a blog post format. Ensure it is structured with an introduction, highlights, interactive discussions, next steps, and a conclusion.
+
+### Completion for Blog Content:
+Content generated and formatted as per the above markdown in README.md.
+
+---
+
+### Prompt for Illustration Generation:
+A modern and professional illustration of an instructor teaching a diverse group of students about generative AI. The classroom setup includes a digital screen displaying AI-related visuals, such as neural networks and large language models. The atmosphere is engaging, with students taking notes and participating actively. The style is sleek and minimalistic, using soft gradients and tech-inspired elements.
+
+### Completion for Illustration:
+Image generated and saved as 'A_modern_and_professional_illustration_of_an_instr.png'.

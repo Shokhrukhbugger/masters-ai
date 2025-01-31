@@ -1,0 +1,10 @@
+ the processing can't. I got in the images, I can't say this like easy to monetize this. So not to my business applications. So I know a lot of. 
+ I know a lot of cases where clients came to us like to do palm and. Ask to create something like I don't know maybe a rate of over a hundred of cases. 
+ Only on the several of them related to image generation, but some of them. Like more more this case more of these cases are related to audio and. 
+ One of the usual like request is okay guys we have. 5,000 hours of recordings of I don't know meetings or. Customers calling us for the support so we 
+ need to understand this data right. So imagine you have a first line support like people calling. Like real users calling describing the issue and the 
+ operators are just sharing. So what should you do to solve it and you need to control it somehow right so you need to. To see what are the most popular 
+ questions or what are the answers so. Is the client is happy or not right and for this case you need to voice processing and. Processing the voice is actually 
+ very old technology. I don't remember how old it is but. Like two things here usually. Working is text the speech and speech to text and if we check. 
+ I didn't know like let's check. Azure text to speech. Okay, it's a yeah is patient. All right. I got it. Everything is a yeah now. Let me check the price 
+ and capture it. The T as pricing it's super cheap it's super cheap. Okay I think here.
