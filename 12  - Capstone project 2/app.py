@@ -82,10 +82,6 @@ user_template = '''
 </div>
 '''
 
-JIRA_URL = "https://knowledgeassist.atlassian.net"
-JIRA_USERNAME = "navruzbek_safoboev@student.itpu.uz"
-JIRA_PROJECT_KEY = "KAN"
-
 # ─── 3) UPDATED PROMPT: company info is now hard-coded in the text ─────────
 STRICT_PROMPT = """
 You are a helpful assistant representing **Shokhrukh Soft**.
@@ -116,22 +112,20 @@ NOT_FOUND_MESSAGES = [
 
 
 def create_jira_ticket(summary, description):
-    jira_url = config.JIRA_URL
-    jira_email = config.JIRA_EMAIL
     if "JIRA_API_TOKEN" not in st.secrets:
         st.error("JIRA_API_TOKEN not found in Streamlit secrets.")
         return False, "JIRA API Token not configured."
+
     jira_api_token = st.secrets["JIRA_API_TOKEN"]
-    jira_project_key = config.JIRA_PROJECT_KEY
-    url = f"{jira_url}/rest/api/2/issue/"
-    auth = base64.b64encode(f"{jira_email}:{jira_api_token}".encode()).decode()
+    url = f"{config.JIRA_URL}/rest/api/2/issue/"
+    auth = base64.b64encode(f"{config.JIRA_EMAIL}:{jira_api_token}".encode()).decode()
     headers = {
         "Authorization": f"Basic {auth}",
         "Content-Type": "application/json"
     }
     payload = {
         "fields": {
-            "project": {"key": jira_project_key},
+            "project": {"key": config.JIRA_PROJECT_KEY},
             "summary": summary,
             "description": description,
             "issuetype": {"name": "Task"},
@@ -141,7 +135,7 @@ def create_jira_ticket(summary, description):
         resp = requests.post(url, headers=headers, json=payload, timeout=10)
         resp.raise_for_status()
         if resp.status_code == 201:
-            issue_key = resp.json()["key"]
+            issue_key = resp.json().get("key", "")
             return True, issue_key
         else:
             return False, resp.text
